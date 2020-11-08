@@ -28,13 +28,13 @@ This is an app that allows one to match their user accounts to an assortment of 
 
 **Required Must-have Stories**
 
-Launch Screen: Logo and Name 
-Login Screen: Allows for creation and login of accounts
-Home Screen: Current Movies Organized By Genre
-Swiping Screen: After clicking on a genre in Home Screen, this screen will allow a user to swipe right or left to say yes or no to a movie option
-Profile Screen: Your information and all the movies you swiped right
-Dashboard Screen: List of all the movies that you have swiped yes to 
-Matches Screen: When clicking on a movie on the dashboard Screen, Lists all the profiles of the people you have a match with and include the name of the specific movie/s for each person
+- Launch Screen: Logo and Name 
+- Login Screen: Allows for creation and login of accounts
+- Home Screen: Current Movies Organized By Genre
+- Swiping Screen: After clicking on a genre in Home Screen, this screen will allow a user to swipe right or left to say yes or no to a movie option
+- Profile Screen: Your information and all the movies you swiped right
+- Dashboard Screen: List of all the movies that you have swiped yes to 
+- Matches Screen: When clicking on a movie on the dashboard Screen, Lists all the profiles of the people you have a match with and include the name of the specific movie/s for each person
 
 **Optional Nice-to-have Stories**
 Streaming vs. In Theater Choice of Available Movies
