@@ -8,10 +8,8 @@ This is a mobile iOS app that will be utilizing the Movie Databases API to allow
 2. [Schema](#Schema)
 
 ## Overview
-A social app that uses Movie Databases API to showcase the current movies categorized by their genres to allow users to find matches on what to watch with other uses.
-
 ### Description
-This is an app that allows one to match their user accounts to an assortment of movie genres, and in result, connect with other users who wish to watch the same movie. 
+This is an app that showcases the current movies playing organized by their genres to allow users to find matches on what to watch with other users.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
@@ -47,12 +45,20 @@ Followed by verbiage that lists the people
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Launch Screen: 
+  * Logo and Name 
+* Login Screen: 
+  * Allows for creation and login of accounts
+* Home Screen: 
+  * Current Movies Organized By Genre
+* Swiping Screen: 
+  * After clicking on a genre within the Home Screen, this screen will allow a user to swipe right or left to say yes or no to all the movie options within that specified genre
+* Profile Screen: 
+  * Your profile picture and account information 
+* Favorites Screen: 
+  * Lists the movies that you have swiped right/yes to 
+* Matches Screen: 
+  * After clicking on a movie on the Favorites Screen, this screen will show list all the profiles of the people you have matched with for the specified movie that was clicked.
 
 ### 3. Navigation
 
