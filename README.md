@@ -15,8 +15,8 @@ This is an app that allows one to match their user accounts to an assortment of 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
+- **Category:** Social/Entertainment 
+- **Mobile:** 
 - **Story:**
 - **Market:**
 - **Habit:**
