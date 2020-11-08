@@ -60,7 +60,7 @@ Followed by verbiage that lists the people
 
 * Home Tab
 * Profile Tab
-* Dashboard Tab
+* Favorites Tab
 
 **Flow Navigation** (Screen to Screen)
 
