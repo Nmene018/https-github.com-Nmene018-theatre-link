@@ -1,5 +1,5 @@
 # TheatreLink
-This is an app that will be utilizing the Movie Databases API to allow one to match their user account to an assortment of movies. This way the target audience of the app can connect with other users who wish to watch the same movie, either in person or online. 
+This is a mobile iOS app that will be utilizing the Movie Databases API to allow one to match their user account to an assortment of movies. This way the target audience of the app can connect with other users who wish to watch the same movie, either in person or online. 
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -8,10 +8,10 @@ This is an app that will be utilizing the Movie Databases API to allow one to ma
 2. [Schema](#Schema)
 
 ## Overview
-App Idea:  A social app that uses Movie Databases API to showcase the current movies categorized by their genres to allow users to find matches on what to watch with other uses.
+A social app that uses Movie Databases API to showcase the current movies categorized by their genres to allow users to find matches on what to watch with other uses.
 
 ### Description
-This is an app that allows one to match their user accounts to an assortment of movie genres. This way the target audience can connect with other users who wish to watch the same movie, either in person or online. 
+This is an app that allows one to match their user accounts to an assortment of movie genres, and in result, connect with other users who wish to watch the same movie. 
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
