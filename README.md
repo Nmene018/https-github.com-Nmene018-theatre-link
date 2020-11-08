@@ -26,22 +26,16 @@ This is an app that showcases the current movies playing organized by their genr
 
 **Required Must-have Stories**
 
-- Launch Screen: Logo and Name 
-- Login Screen: Allows for creation and login of accounts
-- Home Screen: Current Movies Organized By Genre
-- Swiping Screen: After clicking on a genre within the Home Screen, this screen will allow a user to swipe right or left to say yes or no to all the movie options within that specified genre
-- Profile Screen: Your profile picture and account information 
-- Favorites Screen: Lists the movies that you have swiped right/yes to 
-- Matches Screen: After clicking on a movie on the Favorites Screen, this screen will show list all the profiles of the people you have matched with for the specified movie that was clicked.
+* User has to be able to create an account and log back in with all their previous information (favorites, matches) saved.
+* User has to be able to click on a movie genre and swiple left or right on all the movies within the specified genre
+* User must be able to see all the movies that swipped right to in their favorites
+* User must be able to see all the profiles of the users that they have matched with for each of the movies they have in their favorites
+* Profile page for each user 
 
 **Optional Nice-to-have Stories**
-- Streaming vs. In Theater Choice of Available Movies
-- Adults vs kids
-- Chat Feature
-- On profile screen’s movies you swiped right with, a link that takes you to a new screen
-Followed by verbiage that lists the people
-* [fill in your required user stories here]
-* ...
+* Streaming vs. In Theater Choice of Available Movies
+* Adults vs Kids 
+* Chat Feature
 
 ### 2. Screen Archetypes
 
@@ -54,11 +48,11 @@ Followed by verbiage that lists the people
 * Swiping Screen: 
   * After clicking on a genre within the Home Screen, this screen will allow a user to swipe right or left to say yes or no to all the movie options within that specified genre
 * Profile Screen: 
-  * Your profile picture and account information 
+  * Your profile information 
 * Favorites Screen: 
-  * Lists the movies that you have swiped right/yes to 
+  * Lists the movies that the user has swiped right/yes to  
 * Matches Screen: 
-  * After clicking on a movie on the Favorites Screen, this screen will show list all the profiles of the people you have matched with for the specified movie that was clicked.
+  * After clicking on a movie on the Favorites Screen, this screen will show a list of all the profiles of the people you have matched with for the specified movie.
 
 ### 3. Navigation
 
