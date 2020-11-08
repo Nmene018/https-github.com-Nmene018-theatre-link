@@ -46,7 +46,7 @@ This is an app that showcases the current movies playing organized by their genr
 * Home Screen: 
   * Current Movies Organized By Genre
 * Swiping Screen: 
-  * After clicking on a genre within the Home Screen, this screen will allow a user to swipe right or left to say yes or no to all the movie options within that specified genre
+  * After clicking on a genre within the Home Screen, this screen will allow a user to swipe right/left to say yes/no to all the movie options within that specified genre. The screen will provide the title of the movie and the movie poster.
 * Profile Screen: 
   * Your profile information 
 * Favorites Screen: 
