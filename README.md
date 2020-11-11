@@ -64,12 +64,12 @@ This is an app that showcases the current movies playing organized by their genr
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login Screen
+   * Home Screen
+   * Swiping Screen
+* Favorites Screen
+   * Matches Screen
+* Profile Screen
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
