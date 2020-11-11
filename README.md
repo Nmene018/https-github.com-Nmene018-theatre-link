@@ -12,7 +12,6 @@ This is a mobile iOS app that will be utilizing the Movie Databases API to allow
 This is an app that showcases the current movies playing organized by their genres to allow users to find matches on what to watch with other users.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Social/Entertainment 
 - **Mobile:** As of right now, this app will primarily be used and desgined for iOS mobile phones. 
 - **Story:** Analyzes what genres of movies a user is interested in and matches them with others users who have the same movie interests. It allows the user to decide to reach out and message their matches if they choose to.
