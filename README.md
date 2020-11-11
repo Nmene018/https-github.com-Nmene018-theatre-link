@@ -14,7 +14,7 @@ This is an app that showcases the current movies playing organized by their genr
 ### App Evaluation
 - **Category:** Social/Entertainment 
 - **Mobile:** As of right now, this app will primarily be used and desgined for iOS mobile phones. 
-- **Story:** Analyzes what genres of movies a user is interested in and matches them with others users who have the same movie interests. It allows the user to decide to reach out and message their matches if they choose to.
+- **Story:** Analyzes what genres of movies a user is interested in and matches them with others users who have the same movie interests. It allows the user to reach out and message their matches if they choose to.
 - **Market:** This app can be used by anyone, but the target audience are those from ages 13-25. The possible implementation of a kids vs. adults movie selections could make the app more safe and age-friendly. 
 - **Habit:** This app can be used whenever the user wants, depending on if they want to watch a movie/s with some company.
 - **Scope:** First we want to match people based on what types of movies they are interested in. This could possibly evolve into users actually watching the movies with their matches, while possibly implementing the choice of streaming vs. in theater. This has potential use with the AMC Theater application.
