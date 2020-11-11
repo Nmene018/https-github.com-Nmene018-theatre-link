@@ -64,6 +64,7 @@ This is an app that showcases the current movies playing organized by their genr
 
 **Flow Navigation** (Screen to Screen)
 
+* Launch Screen
 * Login Screen
    * Home Screen
    * Swiping Screen
