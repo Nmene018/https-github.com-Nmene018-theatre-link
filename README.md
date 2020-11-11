@@ -66,7 +66,7 @@ This is an app that showcases the current movies playing organized by their genr
 * Launch Screen
 * Login Screen
    * Home Screen
-    * Swiping Screen
+     * Swiping Screen
 * Favorites Screen
    * Matches Screen
 * Profile Screen
