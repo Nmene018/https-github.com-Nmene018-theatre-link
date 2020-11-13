@@ -72,8 +72,7 @@ This is an app that showcases the current movies playing organized by their genr
 * Profile Screen
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/launchScreen.png" width=100>
+![Launch Screen](<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/launchScreen.png" width=100>)
 
 
 ### [BONUS] Digital Wireframes & Mockups
