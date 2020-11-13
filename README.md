@@ -73,7 +73,7 @@ This is an app that showcases the current movies playing organized by their genr
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="(../master/wireframes/launchScreen.png)" width=600>
+<img src="../master/wireframes/launchScreen.png" width=600>
 ![Launch Screen]
 
 ### [BONUS] Digital Wireframes & Mockups
