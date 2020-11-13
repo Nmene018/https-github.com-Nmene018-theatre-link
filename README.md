@@ -72,7 +72,7 @@ This is an app that showcases the current movies playing organized by their genr
 * Profile Screen
 
 ## Wireframes
-<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/launchScreen.png" width=100> <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/loginScreen.png" width=100> <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/homeScreen.png" width=100> <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/swippingScreen.png" width=100> <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/favoritesScreen.png" width=100> <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/matchesScreen.png" width=100>
+[Launch Screen]<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/launchScreen.png" width=100> [Login Screen]<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/loginScreen.png" width=100> [Home Screen]<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/homeScreen.png" width=100> [Swipping Screen]<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/swippingScreen.png" width=100> [Favorites Screen]<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/favoritesScreen.png" width=100> [Matches Screen]<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/matchesScreen.png" width=100>
 
 
 
