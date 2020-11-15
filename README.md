@@ -29,7 +29,7 @@ This is an app that showcases the current movies playing organized by their genr
 * User has to be able to click on a movie genre and swipe yes or no on all the movies within the specified genre
 * User must be able to see all the movies that swipped right to in their favorites
 * User must be able to see all the profiles of the users that they have matched with for each of the movies they have in their favorites
-* Profile page for each user 
+* Profile page for each user that also shows all the movies that they have swipped right o
 
 **Optional Nice-to-have Stories**
 * Streaming vs. In Theater Choice of Available Movies
@@ -47,11 +47,9 @@ This is an app that showcases the current movies playing organized by their genr
 * Swiping Screen: 
   * After clicking on a genre within the Home Screen, this screen will allow a user to swipe yes/no to all the movie options within that specified genre. The screen will provide the title of the movie and the movie poster.
 * Profile Screen: 
-  * Your profile information 
-* Favorites Screen: 
-  * Lists the movies that the user has swiped yes to  
+  * Your profile information along with a list of all the movies the user has favorited.
 * Matches Screen: 
-  * After clicking on a movie on the Favorites Screen, this screen will show a list of all the profiles of the people you have matched with for the specified movie.
+  * This screen will show a list of all matches a user has with other people for the movies that they have favorited.
 
 ### 3. Navigation
 
@@ -67,16 +65,11 @@ This is an app that showcases the current movies playing organized by their genr
 * Login Screen
    * Home Screen
      * Swiping Screen
-* Favorites Screen
-   * Matches Screen
+* Matches Screen
 * Profile Screen
 
 ## Wireframes
-<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/launchScreen.png" width=100>   <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/loginScreen.png" width=100>   <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/homeScreen.png" width=100>   <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/swippingScreen.png" width=100>   <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/favoritesScreen.png" width=100>   <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/matchesScreen.png" width=100>  <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/profileScreen.png" width=100>
-
-
-
-
+<img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/launchScreen.png" width=100>   <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/loginScreen.png" width=100>   <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/homeScreen.png" width=100>   <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/swippingScreen.png" width=100>  <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/matchesScreen.png" width=100>  <img src="https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/profileScreen.png" width=100>
 
 
 ### [BONUS] Digital Wireframes & Mockups
