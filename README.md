@@ -27,14 +27,15 @@ This is an app that showcases the current movies playing organized by their genr
 
 * User has to be able to create an account and log back in with all their previous information (favorites, matches) saved.
 * User has to be able to click on a movie genre and swipe yes or no on all the movies within the specified genre
-* User must be able to see all the movies that swipped right to in their favorites
-* User must be able to see all the profiles of the users that they have matched with for each of the movies they have in their favorites
-* Profile page for each user that also shows all the movies that they have swipped right o
+* User must be able to see all the movies that swipped right to on their profile page
+* User must be able to see all the matches they have made with other users for any of the movies they swipped right to
+* Profile page for each user
 
 **Optional Nice-to-have Stories**
 * Streaming vs. In Theater Choice of Available Movies
 * Adults vs Kids 
 * Chat Feature
+
 
 ### 2. Screen Archetypes
 
@@ -49,7 +50,7 @@ This is an app that showcases the current movies playing organized by their genr
 * Profile Screen: 
   * Your profile information along with a list of all the movies the user has favorited.
 * Matches Screen: 
-  * This screen will show a list of all matches a user has with other people for the movies that they have favorited.
+  * This screen will show a list of all matches a user has with other people for any movies that they have favorited/swipped right to.
 
 ### 3. Navigation
 
@@ -57,7 +58,7 @@ This is an app that showcases the current movies playing organized by their genr
 
 * Home Tab
 * Profile Tab
-* Favorites Tab
+* Matches Tab
 
 **Flow Navigation** (Screen to Screen)
 
