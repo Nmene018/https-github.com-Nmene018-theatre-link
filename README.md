@@ -95,8 +95,7 @@ Login Screen
 Home Feed Screen
 (Read/GET) Create Genres Screen
 - (Read/GET) Query all posts where user is author
-         ```swift
-         
+```swift
         let url = URL(string: "https://api.themoviedb.org/3/genre/movie/list?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-U")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -114,7 +113,7 @@ Home Feed Screen
  
            }
         }
-         ```
+```
 (Create/POST) Create a new object
 Profile Screen
 (Read/GET) Query logged in user object
