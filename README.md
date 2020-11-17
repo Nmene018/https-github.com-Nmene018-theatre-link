@@ -81,10 +81,56 @@ This is an app that showcases the current movies playing organized by their genr
 [This section will be completed in Unit 9]
 
 ### Models
-[Add table of models]
+ | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | username      | Pointer to User    | Login screen username |
+   | password      | Pointer to password| Login screen password |
+   | profileName   | String             | Name of user.         |
+   | profileImage  | file.              | Image that user posts |
+   | commentsCount | Number             | number of comments that has been posted to an image |
+   | swipe         | Boolean            | Movie approval/disapproval  |
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+Login Screen
+Home Feed Screen
+(Read/GET) Create Genres Screen
+ let url = URL(string: "https://api.themoviedb.org/3/genre/movie/list?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-U")!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+           // This will run when the network request returns
+           if let error = error {
+              print(error.localizedDescription)
+           } else if let data = data {
+              let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+            self.movies = dataDictionary["results"] as! [[String:Any]]
+            print(dataDictionary)
+              // TODO: Get the array of movies
+              // TODO: Store the movies in a property to use elsewhere
+              // TODO: Reload your table view data
+ 
+           }
+        }
+(Create/POST) Create a new object
+Profile Screen
+(Read/GET) Query logged in user object
+(Update/PUT) Update user profile image
+Swiping Screen 
+(Read/GET) Create Swiping Screen 
+(Create/POST) Create a new object 
+Matches Screen 
+
+Network Requests for The Movie Database API:
 
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+Base URL: https://developers.themoviedb.org/3/genres/get-movie-list
+HTTP Verb | Endpoint | Description
+   ----------|-------------------|------------
+    `GET`    | /genre/movie/list | Get all movie genres
+    `GET`    | /movie/{movie_id} | Get all movies
+
+
+
+
+
+
