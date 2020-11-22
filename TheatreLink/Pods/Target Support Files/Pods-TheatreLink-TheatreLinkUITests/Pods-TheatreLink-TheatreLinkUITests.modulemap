@@ -1,0 +1,6 @@
+framework module Pods_TheatreLink_TheatreLinkUITests {
+  umbrella header "Pods-TheatreLink-TheatreLinkUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
