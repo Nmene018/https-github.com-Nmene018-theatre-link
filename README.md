@@ -134,7 +134,11 @@ HTTP Verb | Endpoint | Description
     `GET`    | /movie/{movie_id} | Get all movies
 
 
+## Video Walkthrough Unit 10
 
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/HRIs26BANe.gif' width='' alt='Video Walkthrough Unit 10' />
 
 
 
