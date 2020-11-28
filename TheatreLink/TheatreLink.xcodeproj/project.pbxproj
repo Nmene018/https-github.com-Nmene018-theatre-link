@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		02A0FE9E503316D5A9D5516C /* Pods_TheatreLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AF82B960427ED9884AFE0D /* Pods_TheatreLink.framework */; };
 		0BB9D2FFEFEB9BDFE4978314 /* Pods_TheatreLinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A2C4CDFE9386A5CC9E093A /* Pods_TheatreLinkTests.framework */; };
+		120A76EF2571D1BF00B28561 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120A76EE2571D1BF00B28561 /* LoginViewController.swift */; };
 		67B014B42568BC2000609215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B014B32568BC2000609215 /* AppDelegate.swift */; };
 		67B014B62568BC2000609215 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B014B52568BC2000609215 /* SceneDelegate.swift */; };
-		67B014B82568BC2000609215 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B014B72568BC2000609215 /* ViewController.swift */; };
 		67B014BB2568BC2000609215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B014B92568BC2000609215 /* Main.storyboard */; };
 		67B014BD2568BC2400609215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67B014BC2568BC2400609215 /* Assets.xcassets */; };
 		67B014C02568BC2400609215 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B014BE2568BC2400609215 /* LaunchScreen.storyboard */; };
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		120A76EE2571D1BF00B28561 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		36A2C4CDFE9386A5CC9E093A /* Pods_TheatreLinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAFFF41818009A9CB784F35 /* Pods-TheatreLinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheatreLinkTests.debug.xcconfig"; path = "Target Support Files/Pods-TheatreLinkTests/Pods-TheatreLinkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		661F6681A12ED4AE354680F2 /* Pods_TheatreLink_TheatreLinkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLink_TheatreLinkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +46,6 @@
 		67B014B02568BC2000609215 /* TheatreLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheatreLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B014B32568BC2000609215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67B014B52568BC2000609215 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		67B014B72568BC2000609215 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		67B014BA2568BC2000609215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67B014BC2568BC2400609215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67B014BF2568BC2400609215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,11 +118,11 @@
 			children = (
 				67B014B32568BC2000609215 /* AppDelegate.swift */,
 				67B014B52568BC2000609215 /* SceneDelegate.swift */,
-				67B014B72568BC2000609215 /* ViewController.swift */,
 				67B014B92568BC2000609215 /* Main.storyboard */,
 				67B014BC2568BC2400609215 /* Assets.xcassets */,
 				67B014BE2568BC2400609215 /* LaunchScreen.storyboard */,
 				67B014C12568BC2400609215 /* Info.plist */,
+				120A76EE2571D1BF00B28561 /* LoginViewController.swift */,
 			);
 			path = TheatreLink;
 			sourceTree = "<group>";
@@ -165,7 +165,6 @@
 				3EAFFF41818009A9CB784F35 /* Pods-TheatreLinkTests.debug.xcconfig */,
 				E99F51A77BE2BA41E3324CA7 /* Pods-TheatreLinkTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,7 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67B014B82568BC2000609215 /* ViewController.swift in Sources */,
+				120A76EF2571D1BF00B28561 /* LoginViewController.swift in Sources */,
 				67B014B42568BC2000609215 /* AppDelegate.swift in Sources */,
 				67B014B62568BC2000609215 /* SceneDelegate.swift in Sources */,
 			);
