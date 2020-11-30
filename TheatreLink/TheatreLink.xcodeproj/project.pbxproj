@@ -11,6 +11,9 @@
 		0BB9D2FFEFEB9BDFE4978314 /* Pods_TheatreLinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A2C4CDFE9386A5CC9E093A /* Pods_TheatreLinkTests.framework */; };
 		120A76EF2571D1BF00B28561 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120A76EE2571D1BF00B28561 /* LoginViewController.swift */; };
 		120A76FC25721A5000B28561 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120A76FB25721A5000B28561 /* ProfileViewController.swift */; };
+		585ADEB425744DB0000DFAC1 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585ADEB325744DB0000DFAC1 /* HomeTab.storyboard */; };
+		585ADEB925744E97000DFAC1 /* MatchesTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585ADEB825744E97000DFAC1 /* MatchesTab.storyboard */; };
+		585ADEBE25744EDA000DFAC1 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585ADEBD25744EDA000DFAC1 /* ProfileTab.storyboard */; };
 		67B014B42568BC2000609215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B014B32568BC2000609215 /* AppDelegate.swift */; };
 		67B014B62568BC2000609215 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B014B52568BC2000609215 /* SceneDelegate.swift */; };
 		67B014BB2568BC2000609215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B014B92568BC2000609215 /* Main.storyboard */; };
@@ -43,6 +46,9 @@
 		120A76FB25721A5000B28561 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		36A2C4CDFE9386A5CC9E093A /* Pods_TheatreLinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAFFF41818009A9CB784F35 /* Pods-TheatreLinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheatreLinkTests.debug.xcconfig"; path = "Target Support Files/Pods-TheatreLinkTests/Pods-TheatreLinkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		585ADEB325744DB0000DFAC1 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
+		585ADEB825744E97000DFAC1 /* MatchesTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MatchesTab.storyboard; sourceTree = "<group>"; };
+		585ADEBD25744EDA000DFAC1 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		661F6681A12ED4AE354680F2 /* Pods_TheatreLink_TheatreLinkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLink_TheatreLinkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67AF82B960427ED9884AFE0D /* Pods_TheatreLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B014B02568BC2000609215 /* TheatreLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheatreLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +132,9 @@
 				67B014C12568BC2400609215 /* Info.plist */,
 				120A76EE2571D1BF00B28561 /* LoginViewController.swift */,
 				120A76FB25721A5000B28561 /* ProfileViewController.swift */,
+				585ADEB325744DB0000DFAC1 /* HomeTab.storyboard */,
+				585ADEB825744E97000DFAC1 /* MatchesTab.storyboard */,
+				585ADEBD25744EDA000DFAC1 /* ProfileTab.storyboard */,
 			);
 			path = TheatreLink;
 			sourceTree = "<group>";
@@ -279,8 +288,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				585ADEBE25744EDA000DFAC1 /* ProfileTab.storyboard in Resources */,
 				67B014C02568BC2400609215 /* LaunchScreen.storyboard in Resources */,
+				585ADEB425744DB0000DFAC1 /* HomeTab.storyboard in Resources */,
 				67B014BD2568BC2400609215 /* Assets.xcassets in Resources */,
+				585ADEB925744E97000DFAC1 /* MatchesTab.storyboard in Resources */,
 				67B014BB2568BC2000609215 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

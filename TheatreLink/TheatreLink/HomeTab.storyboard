@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeViewController-->
+        <scene sceneID="exo-5n-Hpm">
+            <objects>
+                <viewController id="LiJ-lZ-Rgw" userLabel="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iyl-ZP-7uX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9qp-Fz-1pc"/>
+                        <color key="backgroundColor" red="0.049925050489999998" green="0.13591262630000001" blue="0.27095625140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R0X-mL-vVC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rs-sU-7Ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="1606"/>
+        </scene>
+        <!--HomeNavigationController-->
+        <scene sceneID="jcC-aI-34K">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="IB2-nx-59P" userLabel="HomeNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home-icon" id="yEw-0x-7NE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RyK-Xh-Vht">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LiJ-lZ-Rgw" kind="relationship" relationship="rootViewController" id="Hyf-lF-iu6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yj8-XY-EwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111.59420289855073" y="856.47321428571422"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home-icon" width="30" height="30"/>
+    </resources>
+</document>
