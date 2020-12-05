@@ -26,7 +26,7 @@ This is an app that showcases the current movies playing organized by their genr
 **Required Must-have Stories**
 
 - [x] User has to be able to create an account and log back in with all their previous information (favorites, matches) saved.
-- [ ] User must see the home screen that organizes all the movies by genre
+- [x] User must see the home screen that organizes all the movies by genre
 - [ ] User has to be able to click on a movie genre and swipe yes or no on all the movies within the specified genre
 - [ ] User must be able to see all the matches they have matched with other users for when it comes to any of the movies they swipped right to
 - [ ] Profile page for each user
@@ -139,6 +139,12 @@ HTTP Verb | Endpoint | Description
 Here's a walkthrough of implemented user stories:
 
 <img src='http://g.recordit.co/HRIs26BANe.gif' width='' alt='Video Walkthrough Unit 10' />
+
+## Video Walkthrough Unit 11
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://g.recordit.co/VGafz7y6bF.gif' width='' alt='Video Walkthrough Unit 11' />
 
 
 
