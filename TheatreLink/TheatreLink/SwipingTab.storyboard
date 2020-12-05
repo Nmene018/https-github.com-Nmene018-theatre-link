@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NOq-HU-DBI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SwipingViewController-->
+        <scene sceneID="qan-ZQ-W7l">
+            <objects>
+                <viewController storyboardIdentifier="SwippingViewController" id="NOq-HU-DBI" userLabel="SwipingViewController" customClass="SwipingViewController" customModule="TheatreLink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vGc-DX-dF0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="O8D-CU-rbq">
+                                <rect key="frame" x="38" y="723" width="165" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="5EC-mf-xy7"/>
+                                    <constraint firstAttribute="width" constant="165" id="lWW-hJ-vYC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-aS-oiX" userLabel="titleLabel">
+                                <rect key="frame" x="35" y="112" width="66.5" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="reF-7p-ANt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA5-G9-TiG" userLabel="synopsisLabel">
+                                <rect key="frame" x="38" y="152" width="341" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-yy-x5a">
+                                <rect key="frame" x="214" y="723" width="165" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="qYO-0W-hCI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mAR-BC-qjR"/>
+                        <color key="backgroundColor" white="0.93355799129999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LUq-aS-oiX" firstAttribute="leading" secondItem="mAR-BC-qjR" secondAttribute="leading" constant="35" id="6M3-MG-qxR"/>
+                            <constraint firstItem="ZA5-G9-TiG" firstAttribute="leading" secondItem="mAR-BC-qjR" secondAttribute="leading" constant="38" id="8zV-AK-ccR"/>
+                            <constraint firstItem="O8D-CU-rbq" firstAttribute="leading" secondItem="ZA5-G9-TiG" secondAttribute="leading" id="9PU-ih-9V5"/>
+                            <constraint firstItem="mAR-BC-qjR" firstAttribute="bottom" secondItem="Crc-yy-x5a" secondAttribute="bottom" constant="64.5" id="I1a-eH-NxI"/>
+                            <constraint firstItem="LUq-aS-oiX" firstAttribute="top" secondItem="mAR-BC-qjR" secondAttribute="top" constant="24" id="JWN-ul-TU0"/>
+                            <constraint firstItem="mAR-BC-qjR" firstAttribute="bottom" secondItem="O8D-CU-rbq" secondAttribute="bottom" constant="64.5" id="QUM-CA-N8B"/>
+                            <constraint firstItem="Crc-yy-x5a" firstAttribute="trailing" secondItem="ZA5-G9-TiG" secondAttribute="trailing" id="VSN-ur-Zpy"/>
+                            <constraint firstItem="Crc-yy-x5a" firstAttribute="firstBaseline" secondItem="O8D-CU-rbq" secondAttribute="firstBaseline" id="aOy-V2-rKH"/>
+                            <constraint firstItem="Crc-yy-x5a" firstAttribute="baseline" secondItem="O8D-CU-rbq" secondAttribute="baseline" id="bGV-2v-4nu"/>
+                            <constraint firstItem="mAR-BC-qjR" firstAttribute="trailing" secondItem="ZA5-G9-TiG" secondAttribute="trailing" constant="35" id="dgo-4H-JDZ"/>
+                            <constraint firstItem="Crc-yy-x5a" firstAttribute="leading" secondItem="O8D-CU-rbq" secondAttribute="trailing" constant="11" id="heQ-Yz-18n"/>
+                            <constraint firstItem="ZA5-G9-TiG" firstAttribute="top" secondItem="LUq-aS-oiX" secondAttribute="bottom" constant="8" id="hfa-3H-rjj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Selected Genre" id="Oec-fa-gLI">
+                        <barButtonItem key="leftBarButtonItem" title="Genres" id="ee4-8C-82w"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="synopsisLabel" destination="ZA5-G9-TiG" id="dyp-oa-awI"/>
+                        <outlet property="titleLabel" destination="LUq-aS-oiX" id="Daq-Qu-Wzw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVM-h9-Yas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.81159420289862" y="1775.8928571428571"/>
+        </scene>
+        <!--SwipeNavigationController-->
+        <scene sceneID="lyt-q3-rGL">
+            <objects>
+                <navigationController storyboardIdentifier="SwipeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Xxg-Jg-4Sh" userLabel="SwipeNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zal-Ka-nnC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NOq-HU-DBI" kind="relationship" relationship="rootViewController" id="HOu-GU-OU4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tos-qP-yM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.81159420289862" y="1048.6607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart.circle" catalog="system" width="128" height="121"/>
+        <image name="heart.slash.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

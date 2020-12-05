@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="TheatreLink" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5bA-mo-Hj7">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ow1-VS-cA9">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <gestureRecognizers/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="h6h-Bs-3k5"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="ow1-VS-cA9" firstAttribute="leading" secondItem="h6h-Bs-3k5" secondAttribute="leading" id="0Nk-eF-sMK"/>
+                <constraint firstItem="h6h-Bs-3k5" firstAttribute="bottom" secondItem="ow1-VS-cA9" secondAttribute="bottom" id="T7h-zY-FDm"/>
+                <constraint firstItem="h6h-Bs-3k5" firstAttribute="trailing" secondItem="ow1-VS-cA9" secondAttribute="trailing" id="bQz-8A-lWl"/>
+                <constraint firstItem="ow1-VS-cA9" firstAttribute="top" secondItem="h6h-Bs-3k5" secondAttribute="top" id="hrK-AD-xrz"/>
+            </constraints>
+            <point key="canvasLocation" x="228" y="101"/>
+        </view>
+    </objects>
+</document>

@@ -55,12 +55,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         /***/
         
 //        let genre = genres[indexPath.item]
-//        let genreID = genre["id"] as! Int
+ //       let genreID = genre["id"] as! Int
 //        print("Image was tapped")
 //
-//        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
+//        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SwipeNavigationController") as! SwipeNavigationController
 //        controller.genreID = genreID
-//        self.navigationController?.pushViewController(controller, animated: true)
+ //       self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
