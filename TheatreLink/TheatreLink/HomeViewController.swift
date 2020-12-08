@@ -48,10 +48,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     //4. From tap, I need to go to next screen
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.deselectItem(at: indexPath, animated: true)
-        print("Item pressed")
-        
+   
+ 
         /***/
         
 //        let genre = genres[indexPath.item]
@@ -61,7 +59,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 //        let controller = self.storyboard?.instantiateViewController(withIdentifier: "SwipeNavigationController") as! SwipeNavigationController
 //        controller.genreID = genreID
  //       self.navigationController?.pushViewController(controller, animated: true)
-    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return genres.count
@@ -78,6 +76,14 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+                collectionView.deselectItem(at: indexPath, animated: true)
+                let genre = genres[indexPath.item]
+                let genreID = genre["id"] as! Int
+                let swipingViewController = UIStoryboard(name: "SwipingTab", bundle: nil).instantiateViewController(identifier: "SwipingViewController") as! SwipingViewController
+                swipingViewController.genreID = genreID;                self.navigationController?.pushViewController(swipingViewController, animated: true)
+    }
+     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 120, height: 120)
     }

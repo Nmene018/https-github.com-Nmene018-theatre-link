@@ -4,7 +4,7 @@
 //
 //  Created by Natalie Meneses on 12/4/20.
 //
-
+import AlamofireImage
 import UIKit
 
 protocol CardViewDelegate: AnyObject {
@@ -13,8 +13,11 @@ protocol CardViewDelegate: AnyObject {
 
 class CardView: UIView {
 
+
     @IBOutlet var contentView: UIView!
+
     @IBOutlet var posterView: UIImageView!
+    
     
     weak var delegate: CardViewDelegate?
     

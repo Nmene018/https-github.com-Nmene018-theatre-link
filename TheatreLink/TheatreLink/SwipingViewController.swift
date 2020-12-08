@@ -14,10 +14,11 @@ class SwipingViewController: UIViewController {
     @IBOutlet var synopsisLabel: UILabel!
     
     var movies = [[String: Any]]()
-    var genreID = 28
+    var genreID : Int!
     
     var currentMovieIndex = 0
     var currentCard : CardView?
+    var posterView : UIImageView?
     var nextCard: CardView?
     
         
@@ -31,8 +32,10 @@ class SwipingViewController: UIViewController {
         view.addSubview(newCard)
         currentCard = newCard
       
+        
         let api = "https://api.themoviedb.org/3/discover/movie"
-        let endpoint = "?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=\(genreID)"
+      
+        let endpoint = "?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US&&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=\(genreID!)"
         let url = URL(string: api + endpoint)!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
@@ -55,7 +58,7 @@ class SwipingViewController: UIViewController {
             let posterPath = firstMovie["poster_path"] as! String
             if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)"){
                 self.currentCard?.posterView.af_setImage(withURL: imageURL)
-            }
+           }
        //     if let movieID = URL(string: <#T##String#>)
             
            }
@@ -64,7 +67,7 @@ class SwipingViewController: UIViewController {
         task.resume()
         // Do any additional setup after loading the view.
     }
-    
+  
     func didSwipeCardOffScreen(didLike: Bool){
         //handles moving front card to back
         //sends swipe to Parse
@@ -95,17 +98,19 @@ class SwipingViewController: UIViewController {
        // else{
        //    swipe["Swipe"] = "left"
        // }
-       // currentCard?.center = self.view.center
+       
+        currentCard?.center = self.view.center
         currentMovieIndex += 1
+        
         let newMovie = movies[currentMovieIndex]
         guard currentMovieIndex < movies.count else {
             print("Out of Movies!")
             return
         }
-        let posterPath = newMovie["poster_path"] as! String
-        if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)"){
-            self.currentCard?.posterView.af_setImage(withURL: imageURL)
-        }
+   //     let posterPath = newMovie["poster_path"] as! String
+   //     if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)"){
+   //         self.currentCard?.posterView.af_setImage(withURL: imageURL)
+    //}
     //    addBackgroundCardIfNeeded()
         
     }

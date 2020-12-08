@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NOq-HU-DBI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -10,7 +10,7 @@
         <!--SwipingViewController-->
         <scene sceneID="qan-ZQ-W7l">
             <objects>
-                <viewController storyboardIdentifier="SwippingViewController" id="NOq-HU-DBI" userLabel="SwipingViewController" customClass="SwipingViewController" customModule="TheatreLink" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SwipingViewController" title="SwipingViewController" id="NOq-HU-DBI" userLabel="SwipingViewController" customClass="SwipingViewController" customModule="TheatreLink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vGc-DX-dF0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-aS-oiX" userLabel="titleLabel">
-                                <rect key="frame" x="35" y="112" width="66.5" height="32"/>
+                                <rect key="frame" x="35" y="68" width="66.5" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="reF-7p-ANt"/>
                                 </constraints>
@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA5-G9-TiG" userLabel="synopsisLabel">
-                                <rect key="frame" x="38" y="152" width="341" height="20.5"/>
+                                <rect key="frame" x="38" y="108" width="341" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,24 +72,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVM-h9-Yas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.81159420289862" y="1775.8928571428571"/>
-        </scene>
-        <!--SwipeNavigationController-->
-        <scene sceneID="lyt-q3-rGL">
-            <objects>
-                <navigationController storyboardIdentifier="SwipeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Xxg-Jg-4Sh" userLabel="SwipeNavigationController" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zal-Ka-nnC">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NOq-HU-DBI" kind="relationship" relationship="rootViewController" id="HOu-GU-OU4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tos-qP-yM7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="976.81159420289862" y="1048.6607142857142"/>
         </scene>
     </scenes>
     <resources>

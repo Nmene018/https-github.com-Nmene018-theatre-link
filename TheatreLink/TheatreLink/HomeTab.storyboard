@@ -36,9 +36,6 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="196" height="258"/>
-                                        <connections>
-                                            <segue destination="Rno-Ke-cdV" kind="presentation" id="EwV-Me-i6F"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -77,14 +74,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yj8-XY-EwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-111.59420289855073" y="856.47321428571422"/>
-        </scene>
-        <!--SwipeNavigationController-->
-        <scene sceneID="IKY-vW-HRc">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SwipingNavigationContoller" storyboardName="SwipingTab" referencedIdentifier="SwipeNavigationController" id="Rno-Ke-cdV" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F2T-LZ-UAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-111" y="1997"/>
         </scene>
     </scenes>
     <resources>
