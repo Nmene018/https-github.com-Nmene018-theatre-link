@@ -39,7 +39,7 @@ class CardView: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         self.addSubview(contentView)
         panGesture.addTarget(self, action: #selector(handlePanGesture(panGesture:)))
-        contentView.addGestureRecognizer(panGesture)
+        addGestureRecognizer(panGesture)
     }
     
     @objc func handlePanGesture(panGesture: UIPanGestureRecognizer){

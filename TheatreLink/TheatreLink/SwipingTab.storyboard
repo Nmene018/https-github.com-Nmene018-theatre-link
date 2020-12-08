@@ -15,13 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="O8D-CU-rbq">
-                                <rect key="frame" x="38" y="723" width="165" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="5EC-mf-xy7"/>
-                                    <constraint firstAttribute="width" constant="165" id="lWW-hJ-vYC"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-aS-oiX" userLabel="titleLabel">
                                 <rect key="frame" x="35" y="68" width="66.5" height="32"/>
                                 <constraints>
@@ -37,27 +30,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.slash.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Crc-yy-x5a">
-                                <rect key="frame" x="214" y="723" width="165" height="74"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="qYO-0W-hCI"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47I-vK-haV" userLabel="dislikeButton">
+                                <rect key="frame" x="88" y="709" width="86" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" backgroundImage="heart.slash.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="dislikeButtonTapped:" destination="NOq-HU-DBI" eventType="touchUpInside" id="muQ-oz-dew"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLu-5M-gmA" userLabel="like">
+                                <rect key="frame" x="254" y="708.5" width="78" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="heart.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="likeButtonTapped:" destination="NOq-HU-DBI" eventType="touchUpInside" id="cOm-Gf-lzn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mAR-BC-qjR"/>
                         <color key="backgroundColor" white="0.93355799129999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LUq-aS-oiX" firstAttribute="leading" secondItem="mAR-BC-qjR" secondAttribute="leading" constant="35" id="6M3-MG-qxR"/>
                             <constraint firstItem="ZA5-G9-TiG" firstAttribute="leading" secondItem="mAR-BC-qjR" secondAttribute="leading" constant="38" id="8zV-AK-ccR"/>
-                            <constraint firstItem="O8D-CU-rbq" firstAttribute="leading" secondItem="ZA5-G9-TiG" secondAttribute="leading" id="9PU-ih-9V5"/>
-                            <constraint firstItem="mAR-BC-qjR" firstAttribute="bottom" secondItem="Crc-yy-x5a" secondAttribute="bottom" constant="64.5" id="I1a-eH-NxI"/>
                             <constraint firstItem="LUq-aS-oiX" firstAttribute="top" secondItem="mAR-BC-qjR" secondAttribute="top" constant="24" id="JWN-ul-TU0"/>
-                            <constraint firstItem="mAR-BC-qjR" firstAttribute="bottom" secondItem="O8D-CU-rbq" secondAttribute="bottom" constant="64.5" id="QUM-CA-N8B"/>
-                            <constraint firstItem="Crc-yy-x5a" firstAttribute="trailing" secondItem="ZA5-G9-TiG" secondAttribute="trailing" id="VSN-ur-Zpy"/>
-                            <constraint firstItem="Crc-yy-x5a" firstAttribute="firstBaseline" secondItem="O8D-CU-rbq" secondAttribute="firstBaseline" id="aOy-V2-rKH"/>
-                            <constraint firstItem="Crc-yy-x5a" firstAttribute="baseline" secondItem="O8D-CU-rbq" secondAttribute="baseline" id="bGV-2v-4nu"/>
                             <constraint firstItem="mAR-BC-qjR" firstAttribute="trailing" secondItem="ZA5-G9-TiG" secondAttribute="trailing" constant="35" id="dgo-4H-JDZ"/>
-                            <constraint firstItem="Crc-yy-x5a" firstAttribute="leading" secondItem="O8D-CU-rbq" secondAttribute="trailing" constant="11" id="heQ-Yz-18n"/>
                             <constraint firstItem="ZA5-G9-TiG" firstAttribute="top" secondItem="LUq-aS-oiX" secondAttribute="bottom" constant="8" id="hfa-3H-rjj"/>
                         </constraints>
                     </view>
@@ -65,6 +63,8 @@
                         <barButtonItem key="leftBarButtonItem" title="Genres" id="ee4-8C-82w"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="dislikeButton" destination="47I-vK-haV" id="nHc-Zy-VYn"/>
+                        <outlet property="likeButton" destination="tLu-5M-gmA" id="aJf-fk-KFg"/>
                         <outlet property="synopsisLabel" destination="ZA5-G9-TiG" id="dyp-oa-awI"/>
                         <outlet property="titleLabel" destination="LUq-aS-oiX" id="Daq-Qu-Wzw"/>
                     </connections>

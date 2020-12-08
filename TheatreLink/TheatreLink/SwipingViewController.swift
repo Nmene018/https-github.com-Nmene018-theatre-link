@@ -12,6 +12,8 @@ class SwipingViewController: UIViewController {
     
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var synopsisLabel: UILabel!
+    @IBOutlet var dislikeButton: UIButton!
+    @IBOutlet var likeButton: UIButton!
     
     var movies = [[String: Any]]()
     var genreID : Int!
@@ -45,126 +47,116 @@ class SwipingViewController: UIViewController {
               print(error.localizedDescription)
            } else if let data = data {
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            //self.movies = dataDictionary[""] as! [[String: Any]]
-              // TODO: Get the array of movies
-              // TODO: Store the movies in a property to use elsewhere
-              // TODO: Reload your table view data
+         
             print(dataDictionary)
-           // self.movies = dataDictionary["belongs_to_collection"] as! [[String:Any]]
             self.movies = dataDictionary["results"] as! [[String:Any]]
             guard let firstMovie = self.movies.first else {
                 return
             }
             let posterPath = firstMovie["poster_path"] as! String
             if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)"){
-                self.currentCard?.posterView.af_setImage(withURL: imageURL)
+                self.currentCard?.posterView.af.setImage(withURL: imageURL)
            }
-       //     if let movieID = URL(string: <#T##String#>)
-            
+            let newMovie = self.movies[self.currentMovieIndex]
+            let title =  newMovie["title"] as! String
+            let synopsis = newMovie["overview"] as! String
+            self.titleLabel.text = title
+            self.synopsisLabel.text = synopsis
            }
-            
         }
         task.resume()
-        // Do any additional setup after loading the view.
+       
     }
   
-    func didSwipeCardOffScreen(didLike: Bool){
-        //handles moving front card to back
-        //sends swipe to Parse
-        //  view.removeFromSuperview()
-       
+    func didSwipeCardOffScreen(didLike: Bool, animated: Bool){
         let swipe = PFObject(className: "SwipeDirection")
-      //let movieIDTable = PFObject(className: "MovieID")
-      //  let movieID = movie["id"] as! String
-        
-      //  let title = movie ["title"] as! String
-      //  let synopsis = movie["overview"] as! String
+        let currentMovie = movies[currentMovieIndex]
+        let movieID = currentMovie["id"] as! Int
     
-      //  cell.titleLabel.text=title
-    // cell.synopsisLabel.text=synopsis
         
-        swipe["User"]=PFUser.current()!
+        swipe["User"] = PFUser.current()!
+        swipe["MovieID"] = movieID
         
-        swipe.saveInBackground{ (success, error) in
-        if success{
-             print("saved!")
-        } else {
-            print("error!")
-        }
-        }
-        if didLike{
+        if didLike
+        {
             swipe["Swipe"] = "right"
         }
-       // else{
-       //    swipe["Swipe"] = "left"
-       // }
-       
-        currentCard?.center = self.view.center
-        currentMovieIndex += 1
-        
-        let newMovie = movies[currentMovieIndex]
-        guard currentMovieIndex < movies.count else {
-            print("Out of Movies!")
-            return
+        else{
+            swipe["Swipe"] = "left"
         }
-   //     let posterPath = newMovie["poster_path"] as! String
-   //     if let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)"){
-   //         self.currentCard?.posterView.af_setImage(withURL: imageURL)
-    //}
-    //    addBackgroundCardIfNeeded()
+        
+        swipe.saveInBackground{ (success, error) in
+            if success{
+                print("saved!")
+            } else {
+                print("error!")
+            }
+        }
+        
+        currentMovieIndex += 1
+        var imageURL: URL?
+        if currentMovieIndex < movies.count{
+            let newMovie = movies[currentMovieIndex]
+            let posterPath = newMovie["poster_path"] as! String
+            if let url = URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)"){
+                imageURL = url
+            }
+        }
+        
+        if animated{
+            UIView.animate(withDuration: 0.5) {
+             if didLike{
+                self.currentCard?.center.x = self.view.bounds.maxX + (self.currentCard?.bounds.width ?? 0)
+             }
+             else{
+                self.currentCard?.center.x = self.view.bounds.minX - (self.currentCard?.bounds.width ?? 0)
+             }
+            } completion: { (_) in
+               self.currentCard?.center = self.view.center
+               guard let url = imageURL else {
+                    print("Out of Movies!")
+                self.currentCard?.posterView.image = nil
+                    return
+                }
+               self.currentCard?.posterView.af.setImage(withURL: url)
+                let newMovie = self.movies[self.currentMovieIndex]
+                let title =  newMovie["title"] as! String
+                let synopsis = newMovie["overview"] as! String
+                self.titleLabel.text = title
+                self.synopsisLabel.text = synopsis
+            }
+        }
+        else{
+            self.currentCard?.center = self.view.center
+            guard let url = imageURL else {
+                print("Out of Movies!")
+                currentCard?.posterView.image = nil
+                titleLabel.text = "Out of Movies"
+                synopsisLabel.text = nil
+                return
+            }
+            self.currentCard?.posterView.af.setImage(withURL: url)
+            let newMovie = self.movies[self.currentMovieIndex]
+            let title =  newMovie["title"] as! String
+            let synopsis = newMovie["overview"] as! String
+            self.titleLabel.text = title
+            self.synopsisLabel.text = synopsis
+        }
         
     }
+    
     func createAndAddCard(){
         let cardView = CardView()
         view.addSubview(cardView)
     }
-    
-    func addBackgroundCardIfNeeded(){
-        // check if more movies available
-        //   if available add new card
-        //set image on new card
-        
+
+    @IBAction func likeButtonTapped(_ sender: Any) {
+        didSwipeCardOffScreen(didLike: true, animated: true)
     }
-   /*
-    @IBAction func panOtherCards(_ sender: UIPanGestureRecognizer) {
-        let otherCard = sender.view!
-        let point = sender.translation(in: view)
-        let xFromCenter = otherCard.center.x - view.center.x
-        
-        otherCard.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
-        
-        if xFromCenter>0{
-            
-        }else{
-            
-        }
-        
-        
-        if sender.state == UIGestureRecognizer.State.ended
-        {
-            //moves off to left of screen
-           
-            if otherCard.center.x<75{
-                UIView.animate(withDuration: 0.3, animations: {
-                    otherCard.center = CGPoint(x: otherCard.center.x - 200, y: otherCard.center.y+75)
-                    otherCard.alpha = 1
-                    
-                } )
-                return
-            }else if otherCard.center.x>(view.frame.width - 75){
-                //move off to right side of screen
-                UIView.animate(withDuration: 0.3, animations: {
-                              otherCard.center = CGPoint(x: otherCard.center.x + 200, y: otherCard.center.y+75)
-                    otherCard.alpha=1
-                   
-                    
-                })
-                return
-            }
-        UIView.animate(withDuration: 0.2, animations:{ otherCard.center = self.view.center})
-        }
- 
-    } */
+    
+    @IBAction func dislikeButtonTapped(_ sender: Any) {
+        didSwipeCardOffScreen(didLike: false, animated: true)
+    }
 }
 
 
@@ -177,48 +169,19 @@ extension SwipingViewController: CardViewDelegate {
        
         if sender.state == UIGestureRecognizer.State.ended
         {
-            //moves off to left of screen
           
-            if card.center.x<40
+            if card.center.x < self.view.center.x - 40
             {
-                self.didSwipeCardOffScreen(didLike: true)
+                self.didSwipeCardOffScreen(didLike: false, animated: false)
             }
-            else if card.center.x>self.view.frame.width - 40
+            else if card.center.x > self.view.center.x + 40
             {
-                self.didSwipeCardOffScreen(didLike: false)
+                self.didSwipeCardOffScreen(didLike: true, animated: false)
             }
-            
-            
-            
-            
-            
-          /*  if card.center.x<75{
-                UIView.animate(withDuration: 0.3, animations: {
-                   // card.center = CGPoint(x: card.center.x - 200, y: card.center.y+75)
-                //card.alpha = 1
-                    
-                    if card.center.x<40
-                    {
-                        self.didSwipeCardOffScreen(didLike: true)
-                    }
-                    
-                } )
-               
-
-            }else if card.center.x>(view.frame.width - 75){
-                //move off to right side of screen
-                UIView.animate(withDuration: 0.3, animations: {
-                    //card.center = CGPoint(x: card.center.x + 200, y: card.center.y+75)
-                    //card.alpha = 1
-                  
-                    if card.center.x>self.view.frame.width - 40
-                    {
-                        self.didSwipeCardOffScreen(didLike: false)
-                    }
-                    
-                })
+            else
+            {
+                card.center = self.view.center
             }
- */
             UIView.animate(withDuration: 0.2, animations:{self.currentCard?.center = self.view.center})
         }
     }
