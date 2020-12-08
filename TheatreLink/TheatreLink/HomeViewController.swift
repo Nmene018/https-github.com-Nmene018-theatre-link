@@ -12,6 +12,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     @IBOutlet weak var collectionView: UICollectionView!
+  
     
 //    let genreImages: [UIImage] = []
     

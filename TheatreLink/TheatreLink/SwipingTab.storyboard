@@ -15,23 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-aS-oiX" userLabel="titleLabel">
-                                <rect key="frame" x="35" y="68" width="66.5" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="reF-7p-ANt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA5-G9-TiG" userLabel="synopsisLabel">
-                                <rect key="frame" x="38" y="108" width="341" height="20.5"/>
+                                <rect key="frame" x="38" y="108" width="341" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="QcP-mu-xQw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="341" id="hrd-YT-Qqi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47I-vK-haV" userLabel="dislikeButton">
-                                <rect key="frame" x="88" y="709" width="86" height="77"/>
+                                <rect key="frame" x="89" y="668.5" width="86" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
@@ -41,16 +36,39 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLu-5M-gmA" userLabel="like">
-                                <rect key="frame" x="254" y="708.5" width="78" height="77"/>
+                                <rect key="frame" x="251" y="668.5" width="78" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="heart.circle" catalog="system"/>
                                 <connections>
                                     <action selector="likeButtonTapped:" destination="NOq-HU-DBI" eventType="touchUpInside" id="cOm-Gf-lzn"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dM0-ee-fTD">
+                                <rect key="frame" x="1" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Selected Genre" id="CAw-ft-WN1" userLabel="Selected Genre">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="fIu-YC-m4U" userLabel="Back">
+                                            <connections>
+                                                <action selector="genresBarButton:" destination="NOq-HU-DBI" id="6fr-do-jch"/>
+                                                <segue destination="lII-hc-eo9" kind="show" id="odL-t4-Jmc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-aS-oiX" userLabel="titleLabel">
+                                <rect key="frame" x="20" y="88" width="66.5" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="reF-7p-ANt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mAR-BC-qjR"/>
-                        <color key="backgroundColor" white="0.93355799129999995" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LUq-aS-oiX" firstAttribute="leading" secondItem="mAR-BC-qjR" secondAttribute="leading" constant="35" id="6M3-MG-qxR"/>
                             <constraint firstItem="ZA5-G9-TiG" firstAttribute="leading" secondItem="mAR-BC-qjR" secondAttribute="leading" constant="38" id="8zV-AK-ccR"/>
@@ -59,9 +77,6 @@
                             <constraint firstItem="ZA5-G9-TiG" firstAttribute="top" secondItem="LUq-aS-oiX" secondAttribute="bottom" constant="8" id="hfa-3H-rjj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Selected Genre" id="Oec-fa-gLI">
-                        <barButtonItem key="leftBarButtonItem" title="Genres" id="ee4-8C-82w"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="dislikeButton" destination="47I-vK-haV" id="nHc-Zy-VYn"/>
                         <outlet property="likeButton" destination="tLu-5M-gmA" id="aJf-fk-KFg"/>
@@ -73,9 +88,27 @@
             </objects>
             <point key="canvasLocation" x="976.81159420289862" y="1775.8928571428571"/>
         </scene>
+        <!--HomeNavigationController-->
+        <scene sceneID="0dt-KS-Q3K">
+            <objects>
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="lII-hc-eo9" userLabel="HomeNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home-icon" id="EtQ-fV-aFP"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="nC3-Rh-Pvd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Chi-JV-uaJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sq5-aP-QBg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="991"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart.circle" catalog="system" width="128" height="121"/>
         <image name="heart.slash.circle" catalog="system" width="128" height="121"/>
+        <image name="home-icon" width="30" height="30"/>
     </resources>
 </document>

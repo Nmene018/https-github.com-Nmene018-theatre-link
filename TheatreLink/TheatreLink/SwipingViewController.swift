@@ -26,7 +26,7 @@ class SwipingViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         let newCard = CardView()
         newCard.frame.size = CGSize(width:view.bounds.width * 0.8, height:view.bounds.height * 0.5)
         newCard.center = view.center
@@ -68,6 +68,11 @@ class SwipingViewController: UIViewController {
        
     }
   
+    
+    @IBAction func genresBarButton(_ sender: Any) {
+    }
+    
+    
     func didSwipeCardOffScreen(didLike: Bool, animated: Bool){
         let swipe = PFObject(className: "SwipeDirection")
         let currentMovie = movies[currentMovieIndex]
