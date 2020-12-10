@@ -26,7 +26,43 @@ class MatchesViewController: UIViewController, UITableViewDataSource, UITableVie
     
      override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        getMatches()
+    }
+    
+    func getMovieDetails(movieID: Int, completion: @escaping ([String:Any]) -> Void ){
         
+        // https://api.themoviedb.org/3/movie/577922?api_key=<<api_key>>&language=en-US
+        
+        let api = "https://api.themoviedb.org/3/movie/"
+      
+        let endpoint = "\(movieID)?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US"
+        let url = URL(string: api + endpoint)!
+        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: request) { (data, response, error) in
+           // This will run when the network request returns
+           if let error = error {
+              print(error.localizedDescription)
+           } else if let data = data {
+              let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+         
+            completion(dataDictionary)
+
+           }
+        }
+        task.resume()
+        
+    }
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        getMatches()
+    }
+    
+    func getMatches(){
         
         var matches = [Match]()
         
@@ -77,62 +113,24 @@ class MatchesViewController: UIViewController, UITableViewDataSource, UITableVie
                                 if !matchingMovieIds.contains(movieIDobj2) {
                                     matches.append(match)
                                 }
-                                
                             }
                           }
-                        
                      }
+                    var finalMatches = [Match]()
                     for (index, match) in matches.enumerated() {
                         self.getMovieDetails(movieID: match.movieID, completion: { (movieObject) in
                             let finalMatch = Match(username: match.username, movieID: match.movieID, movie: movieObject)
-                            self.movieMatches.append(finalMatch)
+                            finalMatches.append(finalMatch)
                             if index == matches.count - 1  {
+                                self.movieMatches = finalMatches
                                 self.tableView.reloadData()
                             }
                         })
-                        
                     }
-                   
-                    
                 }
             }
         }
-            
-    }
-    
-    func getMovieDetails(movieID: Int, completion: @escaping ([String:Any]) -> Void ){
         
-        // https://api.themoviedb.org/3/movie/577922?api_key=<<api_key>>&language=en-US
-        
-        let api = "https://api.themoviedb.org/3/movie/"
-      
-        let endpoint = "\(movieID)?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US"
-        let url = URL(string: api + endpoint)!
-        let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
-        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-        let task = session.dataTask(with: request) { (data, response, error) in
-           // This will run when the network request returns
-           if let error = error {
-              print(error.localizedDescription)
-           } else if let data = data {
-              let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-         
-            completion(dataDictionary)
-
-           }
-        }
-        task.resume()
-        
-    }
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-
-        // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
