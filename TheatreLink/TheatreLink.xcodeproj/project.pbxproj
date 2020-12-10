@@ -11,6 +11,8 @@
 		0BB9D2FFEFEB9BDFE4978314 /* Pods_TheatreLinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A2C4CDFE9386A5CC9E093A /* Pods_TheatreLinkTests.framework */; };
 		120A76EF2571D1BF00B28561 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120A76EE2571D1BF00B28561 /* LoginViewController.swift */; };
 		120A76FC25721A5000B28561 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120A76FB25721A5000B28561 /* ProfileViewController.swift */; };
+		12768EA4257E2027007BF4FA /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12768EA3257E2027007BF4FA /* MatchesViewController.swift */; };
+		12768EA9257E3726007BF4FA /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12768EA8257E3726007BF4FA /* MatchesCell.swift */; };
 		585ADEB425744DB0000DFAC1 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585ADEB325744DB0000DFAC1 /* HomeTab.storyboard */; };
 		585ADEB925744E97000DFAC1 /* MatchesTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585ADEB825744E97000DFAC1 /* MatchesTab.storyboard */; };
 		585ADEBE25744EDA000DFAC1 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585ADEBD25744EDA000DFAC1 /* ProfileTab.storyboard */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		120A76EE2571D1BF00B28561 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		120A76FB25721A5000B28561 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		12768EA3257E2027007BF4FA /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		12768EA8257E3726007BF4FA /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
 		36A2C4CDFE9386A5CC9E093A /* Pods_TheatreLinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAFFF41818009A9CB784F35 /* Pods-TheatreLinkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheatreLinkTests.debug.xcconfig"; path = "Target Support Files/Pods-TheatreLinkTests/Pods-TheatreLinkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		585ADEB325744DB0000DFAC1 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 				587682ED257B68E1004F03A8 /* CardView.swift */,
 				58768308257B6A73004F03A8 /* CardView.xib */,
 				5876830D257B6B3D004F03A8 /* SwipingTab.storyboard */,
+				12768EA3257E2027007BF4FA /* MatchesViewController.swift */,
+				12768EA8257E3726007BF4FA /* MatchesCell.swift */,
 			);
 			path = TheatreLink;
 			sourceTree = "<group>";
@@ -445,6 +451,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12768EA4257E2027007BF4FA /* MatchesViewController.swift in Sources */,
+				12768EA9257E3726007BF4FA /* MatchesCell.swift in Sources */,
 				8342E94E257A142E00F972F9 /* GenreCollectionViewCell.swift in Sources */,
 				83C3708B25757018000A1AFD /* HomeViewController.swift in Sources */,
 				120A76EF2571D1BF00B28561 /* LoginViewController.swift in Sources */,
