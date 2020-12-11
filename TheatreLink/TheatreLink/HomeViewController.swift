@@ -97,9 +97,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             16:UIImage(named: "animation_image"),
             35:UIImage(named: "comedy_image"),
             80:UIImage(named: "crime_image"),
-            //99:"name":"Documentary"
-            18 : UIImage(named: "drama_image"),
-            10751 : UIImage(named: "family_image"),
+            99:UIImage(named:"documentary_image"),
+            18:UIImage(named: "drama_image"),
+            10751:UIImage(named: "family_image"),
             14:UIImage(named: "fantasy_image"),
             36:UIImage(named: "history_image"),
             27:UIImage(named: "horror_image"),
@@ -107,7 +107,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             9648:UIImage(named: "mystery_image"),
             10749:UIImage(named: "romance_image"),
             878:UIImage(named: "scifi_image"),
-            //10770:"name":"TV Movie"
+            10770:UIImage(named:"tv_image"),
             53:UIImage(named: "thriller_image"),
             10752:UIImage(named: "war_image"),
             37:UIImage(named: "western_image")
