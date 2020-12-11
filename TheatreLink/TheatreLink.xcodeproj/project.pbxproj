@@ -10,7 +10,6 @@
 		02A0FE9E503316D5A9D5516C /* Pods_TheatreLink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67AF82B960427ED9884AFE0D /* Pods_TheatreLink.framework */; };
 		0BB9D2FFEFEB9BDFE4978314 /* Pods_TheatreLinkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A2C4CDFE9386A5CC9E093A /* Pods_TheatreLinkTests.framework */; };
 		120A76EF2571D1BF00B28561 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120A76EE2571D1BF00B28561 /* LoginViewController.swift */; };
-		120A76FC25721A5000B28561 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120A76FB25721A5000B28561 /* ProfileViewController.swift */; };
 		12768EA4257E2027007BF4FA /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12768EA3257E2027007BF4FA /* MatchesViewController.swift */; };
 		12768EA9257E3726007BF4FA /* MatchesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12768EA8257E3726007BF4FA /* MatchesCell.swift */; };
 		585ADEB425744DB0000DFAC1 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 585ADEB325744DB0000DFAC1 /* HomeTab.storyboard */; };
@@ -20,6 +19,9 @@
 		587682EE257B68E1004F03A8 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587682ED257B68E1004F03A8 /* CardView.swift */; };
 		58768309257B6A73004F03A8 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58768308257B6A73004F03A8 /* CardView.xib */; };
 		5876830E257B6B3D004F03A8 /* SwipingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5876830D257B6B3D004F03A8 /* SwipingTab.storyboard */; };
+		5876840425839326004F03A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5876840325839326004F03A8 /* ProfileViewController.swift */; };
+		58768409258393D6004F03A8 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58768408258393D6004F03A8 /* ProfileCell.swift */; };
+		5876840E25839420004F03A8 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5876840D25839420004F03A8 /* CameraViewController.swift */; };
 		67B014B42568BC2000609215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B014B32568BC2000609215 /* AppDelegate.swift */; };
 		67B014B62568BC2000609215 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67B014B52568BC2000609215 /* SceneDelegate.swift */; };
 		67B014BB2568BC2000609215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67B014B92568BC2000609215 /* Main.storyboard */; };
@@ -52,7 +54,6 @@
 
 /* Begin PBXFileReference section */
 		120A76EE2571D1BF00B28561 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		120A76FB25721A5000B28561 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		12768EA3257E2027007BF4FA /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		12768EA8257E3726007BF4FA /* MatchesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCell.swift; sourceTree = "<group>"; };
 		36A2C4CDFE9386A5CC9E093A /* Pods_TheatreLinkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLinkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +65,9 @@
 		587682ED257B68E1004F03A8 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		58768308257B6A73004F03A8 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		5876830D257B6B3D004F03A8 /* SwipingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SwipingTab.storyboard; sourceTree = "<group>"; };
+		5876840325839326004F03A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		58768408258393D6004F03A8 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		5876840D25839420004F03A8 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		661F6681A12ED4AE354680F2 /* Pods_TheatreLink_TheatreLinkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLink_TheatreLinkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67AF82B960427ED9884AFE0D /* Pods_TheatreLink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheatreLink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67B014B02568BC2000609215 /* TheatreLink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheatreLink.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +153,6 @@
 				67B014BE2568BC2400609215 /* LaunchScreen.storyboard */,
 				67B014C12568BC2400609215 /* Info.plist */,
 				120A76EE2571D1BF00B28561 /* LoginViewController.swift */,
-				120A76FB25721A5000B28561 /* ProfileViewController.swift */,
 				585ADEB325744DB0000DFAC1 /* HomeTab.storyboard */,
 				585ADEB825744E97000DFAC1 /* MatchesTab.storyboard */,
 				585ADEBD25744EDA000DFAC1 /* ProfileTab.storyboard */,
@@ -162,6 +165,9 @@
 				5876830D257B6B3D004F03A8 /* SwipingTab.storyboard */,
 				12768EA3257E2027007BF4FA /* MatchesViewController.swift */,
 				12768EA8257E3726007BF4FA /* MatchesCell.swift */,
+				5876840325839326004F03A8 /* ProfileViewController.swift */,
+				58768408258393D6004F03A8 /* ProfileCell.swift */,
+				5876840D25839420004F03A8 /* CameraViewController.swift */,
 			);
 			path = TheatreLink;
 			sourceTree = "<group>";
@@ -453,11 +459,13 @@
 			files = (
 				12768EA4257E2027007BF4FA /* MatchesViewController.swift in Sources */,
 				12768EA9257E3726007BF4FA /* MatchesCell.swift in Sources */,
+				5876840425839326004F03A8 /* ProfileViewController.swift in Sources */,
+				58768409258393D6004F03A8 /* ProfileCell.swift in Sources */,
 				8342E94E257A142E00F972F9 /* GenreCollectionViewCell.swift in Sources */,
+				5876840E25839420004F03A8 /* CameraViewController.swift in Sources */,
 				83C3708B25757018000A1AFD /* HomeViewController.swift in Sources */,
 				120A76EF2571D1BF00B28561 /* LoginViewController.swift in Sources */,
 				67B014B42568BC2000609215 /* AppDelegate.swift in Sources */,
-				120A76FC25721A5000B28561 /* ProfileViewController.swift in Sources */,
 				587682E9257B688C004F03A8 /* SwipingViewController.swift in Sources */,
 				587682EE257B68E1004F03A8 /* CardView.swift in Sources */,
 				67B014B62568BC2000609215 /* SceneDelegate.swift in Sources */,
