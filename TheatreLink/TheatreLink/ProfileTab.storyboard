@@ -63,24 +63,25 @@
                                                     </connections>
                                                 </button>
                                                 <view autoresizesSubviews="NO" contentMode="scaleAspectFit" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tne-cc-R8X">
-                                                    <rect key="frame" x="0.0" y="17" width="416" height="435.5"/>
+                                                    <rect key="frame" x="2" y="11" width="410.5" height="450"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="khp-QZ-M5b">
-                                                            <rect key="frame" x="43" y="58" width="331" height="318.5"/>
+                                                        <imageView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profile-Icon" translatesAutoresizingMaskIntoConstraints="NO" id="khp-QZ-M5b">
+                                                            <rect key="frame" x="52" y="73" width="306" height="296"/>
                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <gestureRecognizers/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="khp-QZ-M5b" secondAttribute="height" multiplier="1:1" constant="12.5" id="T7Y-3o-UeA"/>
+                                                                <constraint firstAttribute="width" secondItem="khp-QZ-M5b" secondAttribute="height" multiplier="1:1" constant="12.5" id="paw-Kj-vvE"/>
                                                             </constraints>
                                                             <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="0.0"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.051759876310000001" green="0.1337067485" blue="0.27060359719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
-                                                        <constraint firstItem="khp-QZ-M5b" firstAttribute="centerX" secondItem="Tne-cc-R8X" secondAttribute="centerX" constant="0.5" id="NRy-kG-jhl"/>
-                                                        <constraint firstItem="khp-QZ-M5b" firstAttribute="width" secondItem="Tne-cc-R8X" secondAttribute="width" multiplier="0.795673" id="Qgg-Q4-uTH"/>
-                                                        <constraint firstItem="khp-QZ-M5b" firstAttribute="top" secondItem="Tne-cc-R8X" secondAttribute="top" constant="58" id="Ysv-JY-NF7"/>
-                                                        <constraint firstItem="khp-QZ-M5b" firstAttribute="height" secondItem="Tne-cc-R8X" secondAttribute="height" multiplier="0.731343" id="bWO-su-FPh"/>
+                                                        <constraint firstItem="khp-QZ-M5b" firstAttribute="top" secondItem="Tne-cc-R8X" secondAttribute="top" constant="50" id="IjM-8x-wuY"/>
+                                                        <constraint firstItem="khp-QZ-M5b" firstAttribute="centerX" secondItem="Tne-cc-R8X" secondAttribute="centerX" id="YnG-Rc-zaA"/>
+                                                        <constraint firstAttribute="trailing" secondItem="khp-QZ-M5b" secondAttribute="trailing" constant="41" id="ZeD-yY-7Jq"/>
+                                                        <constraint firstItem="khp-QZ-M5b" firstAttribute="height" secondItem="Tne-cc-R8X" secondAttribute="height" multiplier="0.731343" constant="-10.604477611940297" id="ffz-Pr-4Ri"/>
+                                                        <constraint firstItem="khp-QZ-M5b" firstAttribute="width" secondItem="Tne-cc-R8X" secondAttribute="width" multiplier="3:4.1" constant="28.073170731707251" id="q1U-48-Ih7"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -91,11 +92,9 @@
                                                 <constraint firstItem="Tne-cc-R8X" firstAttribute="leading" secondItem="exS-1L-rDT" secondAttribute="leadingMargin" constant="-20" id="E5w-yx-8Rp"/>
                                                 <constraint firstItem="qf6-nO-6US" firstAttribute="centerX" secondItem="uPR-QA-WEf" secondAttribute="centerX" id="EQ3-OM-kvA"/>
                                                 <constraint firstItem="U3l-ec-DhW" firstAttribute="leading" secondItem="exS-1L-rDT" secondAttribute="leadingMargin" constant="62" id="GZ6-KV-hvW"/>
-                                                <constraint firstItem="qf6-nO-6US" firstAttribute="top" secondItem="Tne-cc-R8X" secondAttribute="bottom" constant="52.5" id="Jsr-iv-neP"/>
-                                                <constraint firstItem="uPR-QA-WEf" firstAttribute="centerX" secondItem="Tne-cc-R8X" secondAttribute="centerX" id="VFs-MC-OdG"/>
+                                                <constraint firstItem="qf6-nO-6US" firstAttribute="top" secondItem="Tne-cc-R8X" secondAttribute="bottom" constant="38" id="Jsr-iv-neP"/>
                                                 <constraint firstAttribute="bottom" secondItem="uPR-QA-WEf" secondAttribute="bottom" constant="155" id="gw4-Nt-KqL"/>
                                                 <constraint firstAttribute="bottom" secondItem="qf6-nO-6US" secondAttribute="bottom" constant="270" id="hu1-FQ-igf"/>
-                                                <constraint firstItem="Tne-cc-R8X" firstAttribute="centerX" secondItem="exS-1L-rDT" secondAttribute="centerX" constant="1" id="pgD-L4-qq1"/>
                                                 <constraint firstItem="uPR-QA-WEf" firstAttribute="top" secondItem="qf6-nO-6US" secondAttribute="bottom" constant="8" id="qW6-bg-qcD"/>
                                                 <constraint firstItem="Tne-cc-R8X" firstAttribute="top" secondItem="exS-1L-rDT" secondAttribute="topMargin" constant="-38" id="t4M-b5-Ghq"/>
                                                 <constraint firstItem="uPR-QA-WEf" firstAttribute="leading" secondItem="exS-1L-rDT" secondAttribute="leadingMargin" constant="1" id="vjc-E2-v1s"/>
