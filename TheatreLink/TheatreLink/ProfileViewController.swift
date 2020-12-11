@@ -2,20 +2,59 @@
 //  ProfileViewController.swift
 //  TheatreLink
 //
-//  Created by Kauther Zeini on 11/27/20.
+//  Created by Natalie Meneses on 12/10/20.
 //
 
 import UIKit
 import Parse
+import AlamofireImage
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    @IBOutlet var tableView: UITableView!
+    
+    var changeProfile = [PFObject]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
-    
+   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let query = PFQuery(className: "Profile")
+        query.includeKey("description")
+        query.limit = 1
+        query.findObjectsInBackground { (results, error) in
+            if (results != nil)
+            {
+                self.changeProfile = results!
+                self.tableView.reloadData()
+            }
+        }
+        
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return changeProfile.count
+    }
+   
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
+        let profile = changeProfile[indexPath.row]
+        let user = PFUser.current()!
+        cell.usernameLabel.text = user.username
+        cell.descriptionLabel.text=profile["description"] as! String
+   //     let imageFile = profile["image"] as! PFFileObject
+    //    let urlString = imageFile.url!
+     //   let url = URL(string: urlString)!
+        
+     //   cell.photoView.af_setImage(withURL: url)
+        return cell
+    }
     
     @IBAction func onLogoutButton(_ sender: Any) {
         
@@ -32,8 +71,6 @@ class ProfileViewController: UIViewController {
         
         delegate.window?.rootViewController = loginViewController
     }
-    
-    
 
     /*
     // MARK: - Navigation
