@@ -10,7 +10,7 @@
         <!--SwipingViewController-->
         <scene sceneID="qan-ZQ-W7l">
             <objects>
-                <viewController storyboardIdentifier="SwipingViewController" title="SwipingViewController" id="NOq-HU-DBI" userLabel="SwipingViewController" customClass="SwipingViewController" customModule="TheatreLink" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SwipingViewController" id="NOq-HU-DBI" userLabel="SwipingViewController" customClass="SwipingViewController" customModule="TheatreLink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vGc-DX-dF0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,8 +57,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-aS-oiX" userLabel="titleLabel">
-                                <rect key="frame" x="20" y="88" width="66.5" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-aS-oiX" userLabel="titleLabel">
+                                <rect key="frame" x="35" y="68" width="369" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="reF-7p-ANt"/>
                                 </constraints>
@@ -68,11 +68,12 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mAR-BC-qjR"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.65101498369999999" green="0.7823053002" blue="0.65880751609999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="LUq-aS-oiX" firstAttribute="leading" secondItem="mAR-BC-qjR" secondAttribute="leading" constant="35" id="6M3-MG-qxR"/>
                             <constraint firstItem="ZA5-G9-TiG" firstAttribute="leading" secondItem="mAR-BC-qjR" secondAttribute="leading" constant="38" id="8zV-AK-ccR"/>
                             <constraint firstItem="LUq-aS-oiX" firstAttribute="top" secondItem="mAR-BC-qjR" secondAttribute="top" constant="24" id="JWN-ul-TU0"/>
+                            <constraint firstItem="mAR-BC-qjR" firstAttribute="trailing" secondItem="LUq-aS-oiX" secondAttribute="trailing" constant="10" id="S9S-cG-Ah7"/>
                             <constraint firstItem="mAR-BC-qjR" firstAttribute="trailing" secondItem="ZA5-G9-TiG" secondAttribute="trailing" constant="35" id="dgo-4H-JDZ"/>
                             <constraint firstItem="ZA5-G9-TiG" firstAttribute="top" secondItem="LUq-aS-oiX" secondAttribute="bottom" constant="8" id="hfa-3H-rjj"/>
                         </constraints>
@@ -91,12 +92,12 @@
         <!--HomeNavigationController-->
         <scene sceneID="0dt-KS-Q3K">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="lII-hc-eo9" userLabel="HomeNavigationController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="lII-hc-eo9" userLabel="HomeNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home-icon" id="EtQ-fV-aFP"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="nC3-Rh-Pvd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Chi-JV-uaJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
