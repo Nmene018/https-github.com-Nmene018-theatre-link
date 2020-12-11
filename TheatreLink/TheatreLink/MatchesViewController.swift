@@ -34,7 +34,7 @@ class MatchesViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        //getMatches()
+        getMatches()
     }
     
     
