@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="PAL-6g-bqV"/>
-                        <color key="backgroundColor" red="0.049925050489999998" green="0.13591262630000001" blue="0.27095625140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.048909254370000002" green="0.14249646660000001" blue="0.2470721602" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="nyI-9D-KJl">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="rXv-xZ-nuA">
