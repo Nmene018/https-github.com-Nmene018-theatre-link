@@ -35,7 +35,7 @@ This is an app that showcases the current movies playing organized by their genr
 * Streaming vs. In Theater Choice of Available Movies
 * Adults vs Kids 
 * Chat Feature
-
+* To only make matches with other users based on their locations
 
 ### 2. Screen Archetypes
 
