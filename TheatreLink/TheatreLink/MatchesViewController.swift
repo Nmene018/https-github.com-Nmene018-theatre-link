@@ -87,12 +87,13 @@ class MatchesViewController: UIViewController, UITableViewDataSource, UITableVie
                                     continue
                                 }
                                 let match = Match(username: username, movieID: movieIDobj2)
-                                let matchingMovieIds = matches.map {
-                                    $0.movieID
-                                }
-                                if !matchingMovieIds.contains(movieIDobj2) {
+                              //  let matchingMovieIds = matches.map {
+                                //    $0.movieID
+                                //}
+                               // if UserDefaults.standard.object(forKey: "\(movieIDobj2)") == nil
+                              //  {
                                     matches.append(match)
-                                }
+                               // }
                             }
                         }
                     }

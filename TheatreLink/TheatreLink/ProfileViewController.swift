@@ -13,8 +13,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet var tableView: UITableView!
     
-    var changeProfile = [PFObject]()
-
+    var changeProfile : PFObject?
+    var profileDescription : String?
+    var profileImage : PFFileObject?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(didUpdateProfileImageUpdateNotification), name: CameraViewController.profileImageUpdateNotification, object: nil)
@@ -32,13 +34,29 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func getUserProfile()
     {
         let query = PFQuery(className: "Profile")
-        query.includeKey("description")
-        query.limit = 1
+        query.includeKeys(["description", "author", "image"])
         query.order(byDescending: "updatedAt")
         query.findObjectsInBackground { (results, error) in
             if (results != nil)
             {
-                self.changeProfile = results!
+                let users : [PFUser] = results?.compactMap {
+                    $0["author"] as? PFUser
+                } ?? []
+//                let updatedUser = users?.filter {
+//                    $0 == PFUser.current()!
+//                }.first
+//                let updatedUser = users.first(where: {
+//                    $0.objectId == PFUser.current()!.objectId
+//                })
+                let index = users.firstIndex(where: {
+                    $0.objectId == PFUser.current()!.objectId
+                }) ?? 0
+                
+                let updatedUser = users[index]
+                self.changeProfile = updatedUser
+                let userDescription = results![index]["description"]
+                self.profileDescription = userDescription as! String
+                self.profileImage = results![index]["image"] as? PFFileObject
                 self.tableView.reloadData()
             }
         }
@@ -50,16 +68,16 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return min(changeProfile.count, 1)
+        return changeProfile == nil ? 0 : 1
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
-        let profile = changeProfile[indexPath.row]
+        let profile = changeProfile!
         let user = PFUser.current()!
         cell.usernameLabel.text = user.username
-        cell.descriptionLabel.text=profile["description"] as! String
-        let imageFile = profile["image"] as? PFFileObject
+        cell.descriptionLabel.text = profileDescription //profile["description"] as! String
+        let imageFile = profileImage //profile["image"] as? PFFileObject
         
         if imageFile != nil{
                     let urlString = imageFile?.url!
