@@ -149,6 +149,7 @@ Here's a walkthrough of implemented user stories:
 <img src='http://g.recordit.co/SmFADlVNEo.gif' width='' alt='Video Walkthrough Unit 12' />
 
 ## Narrative Walkthrough
+<img src = 'narrative walkthrough.mov' width = '' alt='Narrative Walkthrough' />
 
 
 
