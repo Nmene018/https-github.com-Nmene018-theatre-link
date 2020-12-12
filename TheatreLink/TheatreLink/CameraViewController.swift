@@ -14,6 +14,9 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UIN
 
     @IBOutlet var descriptionField: UITextField!
     @IBOutlet var ProfileImageView: UIImageView!
+    
+    static let profileImageUpdateNotification = Notification.Name(rawValue: "profileImageUpdateNotification")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ProfileImageView.layer.cornerRadius = ProfileImageView.frame.size.height / 2.0
@@ -52,14 +55,15 @@ class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         changeProfile["author"] = PFUser.current()!
         
         let imageData = ProfileImageView.image!.pngData()
-        let file = PFFileObject(name: "image.png", data: imageData!)
-
+        let file = PFFileObject(data: imageData!)
+        
         changeProfile["image"] = file
         
         changeProfile.saveInBackground{  (success, error) in
             if success{
                 self.dismiss(animated: true, completion: nil)
                 print("saved!")
+                NotificationCenter.default.post(name: CameraViewController.profileImageUpdateNotification, object: nil)
             }else{
                 print("error!")
             }

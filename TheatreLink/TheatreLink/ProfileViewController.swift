@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateProfileImageUpdateNotification), name: CameraViewController.profileImageUpdateNotification, object: nil)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -26,9 +26,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        getUserProfile()
+    }
+    
+    func getUserProfile()
+    {
         let query = PFQuery(className: "Profile")
         query.includeKey("description")
         query.limit = 1
+        query.order(byDescending: "updatedAt")
         query.findObjectsInBackground { (results, error) in
             if (results != nil)
             {
@@ -36,10 +42,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 self.tableView.reloadData()
             }
         }
-        
     }
+    
+    @objc func didUpdateProfileImageUpdateNotification()
+    {
+        getUserProfile()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return changeProfile.count
+        return min(changeProfile.count, 1)
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,11 +59,18 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         let user = PFUser.current()!
         cell.usernameLabel.text = user.username
         cell.descriptionLabel.text=profile["description"] as! String
-   //     let imageFile = profile["image"] as! PFFileObject
-    //    let urlString = imageFile.url!
-     //   let url = URL(string: urlString)!
+        let imageFile = profile["image"] as? PFFileObject
         
-     //   cell.photoView.af_setImage(withURL: url)
+        if imageFile != nil{
+                    let urlString = imageFile?.url!
+                let url = URL(string: urlString!)
+            cell.photoView.af.setImage(withURL: url!)
+        }
+        else{
+            cell.photoView.image = #imageLiteral(resourceName: "profile-Icon")
+        }
+        
+        
         return cell
     }
     
