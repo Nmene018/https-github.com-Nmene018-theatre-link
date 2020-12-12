@@ -133,20 +133,8 @@ HTTP Verb | Endpoint | Description
     `GET`    | /movie/{movie_id} | Get all movies
 
 
-## Video Walkthrough Unit 10
-
-Here's a walkthrough of implemented user stories:
-
-<img src='http://g.recordit.co/HRIs26BANe.gif' width='' alt='Video Walkthrough Unit 10' />
-
-## Video Walkthrough Unit 11
-
-Here's a walkthrough of implemented user stories:
-
-<img src='http://g.recordit.co/VGafz7y6bF.gif' width='' alt='Video Walkthrough Unit 11' />
-
-## Video Walkthrough Unit 12
-<img src='http://g.recordit.co/SmFADlVNEo.gif' width='' alt='Video Walkthrough Unit 12' />
+## Video Walkthrough 
+<img src='http://g.recordit.co/SmFADlVNEo.gif' width='' alt='Video Walkthrough' />
 
 ## Narrative Walkthrough
 https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/narrativewalkthrough.mov
