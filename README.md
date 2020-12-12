@@ -134,7 +134,7 @@ HTTP Verb | Endpoint | Description
 
 
 ## Video Walkthrough 
-<img src= width='http://g.recordit.co/9IXQ5E8Bm2.gif' alt='Video Walkthrough' />
+<img src= 'http://g.recordit.co/9IXQ5E8Bm2.gif' width= '' alt='Video Walkthrough' />
 
 ## Narrative Walkthrough
 https://github.com/https-github-com-TheatreLink/TheatreLink/blob/main/wireframes/narrativewalkthrough.mov
