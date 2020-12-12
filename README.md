@@ -29,7 +29,7 @@ This is an app that showcases the current movies playing organized by their genr
 - [x] User must see the home screen that organizes all the movies by genre
 - [x] User has to be able to click on a movie genre and swipe yes or no on all the movies within the specified genre
 - [x] User must be able to see all the matches they have matched with other users for when it comes to any of the movies they swipped right to
-- [ ] Profile page for each user
+- [x] Profile page for each user
 
 **Optional Nice-to-have Stories**
 * Streaming vs. In Theater Choice of Available Movies
