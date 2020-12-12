@@ -13,11 +13,13 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet var tableView: UITableView!
     
-    var changeProfile = [PFObject]()
-
+    var changeProfile : PFObject?
+    var profileDescription : String?
+    var profileImage : PFFileObject?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        NotificationCenter.default.addObserver(self, selector: #selector(didUpdateProfileImageUpdateNotification), name: CameraViewController.profileImageUpdateNotification, object: nil)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -26,33 +28,67 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        getUserProfile()
+    }
+    
+    func getUserProfile()
+    {
         let query = PFQuery(className: "Profile")
-        query.includeKey("description")
-        query.limit = 1
+        query.includeKeys(["description", "author", "image"])
+        query.order(byDescending: "updatedAt")
         query.findObjectsInBackground { (results, error) in
             if (results != nil)
             {
-                self.changeProfile = results!
+                let users : [PFUser] = results?.compactMap {
+                    $0["author"] as? PFUser
+                } ?? []
+//                let updatedUser = users?.filter {
+//                    $0 == PFUser.current()!
+//                }.first
+//                let updatedUser = users.first(where: {
+//                    $0.objectId == PFUser.current()!.objectId
+//                })
+                let index = users.firstIndex(where: {
+                    $0.objectId == PFUser.current()!.objectId
+                }) ?? 0
+                
+                let updatedUser = users[index]
+                self.changeProfile = updatedUser
+                let userDescription = results![index]["description"]
+                self.profileDescription = userDescription as! String
+                self.profileImage = results![index]["image"] as? PFFileObject
                 self.tableView.reloadData()
             }
         }
-        
     }
+    
+    @objc func didUpdateProfileImageUpdateNotification()
+    {
+        getUserProfile()
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         return changeProfile.count
+        return changeProfile == nil ? 0 : 1
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell") as! ProfileCell
-        let profile = changeProfile[indexPath.row]
+        let profile = changeProfile!
         let user = PFUser.current()!
         cell.usernameLabel.text = user.username
-        cell.descriptionLabel.text=profile["description"] as! String
-   //     let imageFile = profile["image"] as! PFFileObject
-    //    let urlString = imageFile.url!
-     //   let url = URL(string: urlString)!
+        cell.descriptionLabel.text = profileDescription //profile["description"] as! String
+        let imageFile = profileImage //profile["image"] as? PFFileObject
         
-     //   cell.photoView.af_setImage(withURL: url)
+        if imageFile != nil{
+                    let urlString = imageFile?.url!
+                let url = URL(string: urlString!)
+            cell.photoView.af.setImage(withURL: url!)
+        }
+        else{
+            cell.photoView.image = #imageLiteral(resourceName: "profile-Icon")
+        }
+        
+        
         return cell
     }
     

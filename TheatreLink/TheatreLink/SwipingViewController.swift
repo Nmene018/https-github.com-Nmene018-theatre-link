@@ -49,9 +49,15 @@ class SwipingViewController: UIViewController {
               let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
          
             print(dataDictionary)
-           self.movies = dataDictionary["results"] as! [[String:Any]]
-            
-
+            let movies = dataDictionary["results"] as! [[String:Any]]
+            var updatedMovies = [[String:Any]]()
+            for movie in movies{
+                let movieID = movie["id"] as! Int
+                if UserDefaults.standard.object(forKey: "\(movieID)\(PFUser.current()!.objectId!)") == nil{
+                    updatedMovies.append(movie)
+                }
+            }
+            self.movies = updatedMovies
             guard let firstMovie = self.movies.first else {
                 return
             }
@@ -78,7 +84,7 @@ class SwipingViewController: UIViewController {
     func didSwipeCardOffScreen(didLike: Bool, animated: Bool){
         let swipe = PFObject(className: "SwipeDirection")
         
-        //let defaults = UserDefaults.standard
+        let defaults = UserDefaults.standard
         
         let currentMovie = movies[currentMovieIndex]
         let movieID = currentMovie["id"] as! Int
@@ -86,15 +92,13 @@ class SwipingViewController: UIViewController {
         
         swipe["User"] = PFUser.current()!
         swipe["MovieID"] = movieID
-        
+        defaults.set(movieID, forKey: "\(movieID)\(PFUser.current()!.objectId!)")
         if didLike
         {
             swipe["Swipe"] = "right"
-           // defaults.set(movieID, forKey: swipe["MovieID"] as! String )
         }
         else{
             swipe["Swipe"] = "left"
-           // defaults.set(movieID, forKey: swipe["MovieID"]  as! String )
         }
         
         swipe.saveInBackground{ (success, error) in
